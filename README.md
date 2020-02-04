@@ -6,5 +6,8 @@
 
 ### ShadowsocksR
 ```
-http://shell.haoduck.com/SSR
+bash <(curl -s -L http://shell.haoduck.com/SSR)
 ```
+
+
+## 脚本来源:[](/脚本来源.md)

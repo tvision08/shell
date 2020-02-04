@@ -3,7 +3,11 @@
 
 
 ## 代理类
-ShadowsocksR
 
-http://shell.haoduck.com/SSR
+### ShadowsocksR
+```
+bash <(curl -s -L http://shell.haoduck.com/SSR)
+```
 
+
+#脚本来源:[](/脚本来源.md)
