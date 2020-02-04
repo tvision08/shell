@@ -17,6 +17,19 @@ bash <(curl -s -L shell.haoduck.com/v2)
 bash <(curl -s -L shell.haoduck.com/233v2)
 ```
 
+## 测速测性能类
+
+### ZBench测速脚本
+```
+bash <(curl -s -L shell.haoduck.com/ZBench-CN.sh)
+```
+```
+bash <(curl -s -L shell.haoduck.com/ZBench.sh)
+```
+如果上面的中文版乱码可以试试下面的英文版
+
+
+
 
 ## Linux各种脚本
 

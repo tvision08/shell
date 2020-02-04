@@ -2,7 +2,7 @@
 收集一些一键脚本
 
 
-## 代理类
+# 代理类
 
 ### ShadowsocksR
 ```
@@ -17,7 +17,7 @@ bash <(curl -s -L shell.haoduck.com/v2)
 bash <(curl -s -L shell.haoduck.com/233v2)
 ```
 
-## 测速测性能类
+# 测速测性能类
 
 ### ZBench测速脚本
 ```
@@ -31,7 +31,7 @@ bash <(curl -s -L shell.haoduck.com/ZBench.sh)
 
 
 
-## Linux各种脚本
+# Linux各种脚本
 
 ### 萌咖大佬的dd脚本
 ```
