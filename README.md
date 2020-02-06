@@ -1,5 +1,5 @@
-# shell
-收集一些一键脚本
+# 脚本合集
+此项目仅作为收集，请规范使用，一切以底部**脚本来源**为准。
 
 
 # 代理类
@@ -45,6 +45,11 @@ bash <(curl -s -L sh.disk.gs/dd-od.sh)
 ### BBR/BBR魔改/BBR Plus/锐速(Lotsever) 一键脚本
 ```
 bash <(curl -s -L sh.disk.gs/tcp.sh)
+```
+
+### BBR/BBR魔改/BBR Plus/锐速(Lotsever) 一键脚本(loc大佬修改脚本，内核更新)
+```
+bash <(curl -s -L sh.disk.gs/tcpx.sh)
 ```
 
 
