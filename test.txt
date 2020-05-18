@@ -1,0 +1,3 @@
+{
+"registry-mirrors": ["https://fpqqn4ib.mirror.aliyuncs.com"]
+}
