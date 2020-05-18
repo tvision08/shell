@@ -31,7 +31,7 @@ menu(){
 	echo -e ""
 	echo -e "${yellow}1${none} 代理类（V2 55R）"
 	echo -e "${yellow}2${none} 中转类（端口转发）"
-	echo -e "${yellow}3${none} 系统类（锐速BBR/测速/软件源）"
+	echo -e "${yellow}3${none} 系统类（锐速BBR/测速/dd网络安装等）"
 	echo -e "${yellow}4${none} 安装程序"
 	echo -e "${yellow}5${none} 杂项"
 	echo -e "温馨提示...如果你不想执行选项...按 ${yellow}Ctrl + C$none 即可退出"
