@@ -36,9 +36,9 @@ menu(){
 	echo -e "${yellow}5${none} 杂项"
 	echo -e "温馨提示...如果你不想执行选项...按 ${yellow}Ctrl + C$none 即可退出"
 	echo -e ""
-	read -p "$(echo -e "请选择脚本类型${yellow}[1-5]$none:")" start
+	read -p "$(echo -e "请选择脚本类型${yellow}[1-5]$none:")" menu_case
 	echo -e ""
-	case $start in
+	case $menu_case in
 	1)
 	#echo -e "选择1 代理类"
 	daili_menu
@@ -116,8 +116,9 @@ xitong_menu(){
 	echo -e ""
 	echo -e "${yellow}1${none} 一键BBR/锐速三合一脚本"
 	echo -e "${yellow}2${none} 一键测试网速"
-	echo -e "${yellow}3${none} 配置Docker国内源"
-	echo -e "${yellow}4${none} 测试回源线路"
+	echo -e "${yellow}3${none} dd网络重装脚本"
+	echo -e "${yellow}4${none} 配置Docker国内源"
+	echo -e "${yellow}5${none} 测试回源线路"
 	echo -e ""
 	echo -e "${yellow}0${none} 返回主菜单"
 	echo -e ""
@@ -131,9 +132,12 @@ xitong_menu(){
 	superbench
 	;;
 	3)
-	Docker_cn
+	dd_net
 	;;
 	4)
+	Docker_cn
+	;;
+	5)
 	mtr_test
 	;;
 	0)
@@ -150,7 +154,7 @@ install_menu(){
 	echo -e ""
 	echo -e "${yellow}0${none} 返回主菜单"
 	echo -e ""
-	read -p "$(echo -e "请选择脚本类型${yellow}[1-2]$none:")"  install
+	read -p "$(echo -e "请选择脚本类型${yellow}[1-2]$none:")" install
 	echo -e ""
 	case $install in
 	1)
@@ -172,9 +176,9 @@ zaxiang_menu(){
 	echo -e ""
 	echo -e "${yellow}0${none} 返回主菜单"
 	echo -e ""
-	read -p "$(echo -e "请选择脚本类型${yellow}[1-1]$none:")"  install
+	read -p "$(echo -e "请选择脚本类型${yellow}[1-1]$none:")" zaxiang_menu_case
 	echo -e ""
-	case $install in
+	case $zaxiang_menu_case in
 	1)
 	git_io
 	;;
@@ -215,6 +219,61 @@ tcp(){
 
 superbench(){
 	bash <(curl -s -L https://raw.githubusercontent.com/oooldking/script/master/superbench_git.sh)
+}
+
+dd_net(){
+	clear
+	echo -e ""
+	echo -e "${yellow}1${none} veip007"
+	echo -e "${yellow}2${none} 真·究极·一键重装脚本"
+	echo -e ""
+	echo -e "${yellow}0${none} 返回主菜单"
+	echo -e ""
+	read -p "$(echo -e "请选择脚本类型${yellow}[1-2]$none:")" dd_net_case
+	echo -e ""
+	case $dd_net_case in
+	1)
+	dd_net_veip007
+	;;
+	2)
+	bash <(curl -s -L https://git.io/AutoReinstall.sh)
+	;;
+	0)
+	menu
+	;;
+	*)
+	echo -e "${yellow}输入错误${none}"
+	sleep 1
+	dd_net
+	;;
+	esac
+}
+dd_net_veip007(){
+	clear
+	echo -e ""
+	echo -e "${yellow}1${none} GoogleDrive源(速度快但国内连不上)"
+	echo -e "${yellow}2${none} OneDrive源"
+	echo -e ""
+	echo -e "${yellow}0${none} 返回主菜单"
+	echo -e ""
+	read -p "$(echo -e "请选择脚本类型${yellow}[1-2]$none:")" dd_net_veip007_yuan
+	echo -e ""
+	case $dd_net_veip007_yuan in
+	1)
+	bash <(curl -s -L https://raw.githubusercontent.com/veip007/dd/master/dd-gd.sh)
+	;;
+	2)
+	bash <(curl -s -L https://raw.githubusercontent.com/veip007/dd/master/dd-od.sh)
+	;;
+	0)
+	menu
+	;;
+	*)
+	echo -e "${yellow}输入错误${none}"
+	sleep 1
+	dd_net
+	;;
+	esac
 }
 
 Docker_cn(){
