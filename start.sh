@@ -219,8 +219,18 @@ docker(){
 git_io(){
 	echo "请输入原Github长链接(带https://)："
 	read uurl
+	if [[ "$uurl" == "" ]]; then
+		git_io
+	elif [[ $(echo $uurl | grep github.com) == "" ]]; then
+		clear
+		echo -e "链接不正确\n"
+		git_io
+	fi
 	echo "请输入git.io短链接后缀(仅后缀)："
 	read ccode
+	if [[ "$ccode" == "" ]]; then
+		git_io
+	fi
 	clear
 	echo ""
 	echo -e "原Github长链接为：$uurl\ngit.io短链接为：https://git.io/$ccode"
@@ -232,6 +242,5 @@ git_io(){
 		git_io
 	fi
 }
-
 
 menu
