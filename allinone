@@ -285,4 +285,5 @@ git_io(){
 	fi
 }
 
+start
 menu
