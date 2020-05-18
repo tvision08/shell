@@ -8,7 +8,7 @@ magenta='\e[95m'
 cyan='\e[96m'
 none='\e[0m'
 
-start(){
+init(){
 	[[ $(id -u) != 0 ]] && echo -e "\n 哎呀……请使用 ${red}root ${none}用户运行 ${yellow}~(^_^) ${none}\n" && exit 1
 	cmd="apt-get"
 	# 笨笨的检测方法
@@ -58,10 +58,6 @@ menu(){
 	5)
 	#echo -e "选择5 杂项"
 	zaxiang_menu
-	;;
-	0)
-	#echo -e "选择0 退出"
-	exit 1
 	;;
 	*)
 	echo -e "输入不正确"
@@ -203,11 +199,11 @@ ssr(){
 #中转类
 
 haproxy(){
-	bash <(curl -s -L https://cdn.jsdelivr.net/gh/ToyoDAdoubi/doubi@master/haproxy.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/haproxy.sh)
 }
 
 brook-pf(){
-	bash <(curl -s -L https://cdn.jsdelivr.net/gh/ToyoDAdoubi/doubi@master/brook-pf.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/brook-pf.sh)
 }
 
 #系统类
@@ -218,7 +214,7 @@ tcp(){
 }
 
 superbench(){
-	bash <(curl -s -L https://cdn.jsdelivr.net/gh/oooldking/script@master/superbench_git.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/oooldking/script/master/superbench_git.sh)
 }
 
 Docker_cn(){
@@ -285,5 +281,5 @@ git_io(){
 	fi
 }
 
-start
+init
 menu
